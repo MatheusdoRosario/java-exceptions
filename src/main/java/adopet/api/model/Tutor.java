@@ -16,7 +16,6 @@ import java.util.List;
 @NoArgsConstructor
 @AllArgsConstructor
 @EqualsAndHashCode(of = "id")
-@Getter
 public class Tutor {
 
     @Id
@@ -36,4 +35,19 @@ public class Tutor {
         this.email = dados.email();
     }
 
+    public Long getId() {
+        return id;
+    }
+
+    public @NotBlank String getNome() {
+        return nome;
+    }
+
+    public @NotBlank String getEmail() {
+        return email;
+    }
+
+    public List<Adocao> getAdocoes() {
+        return adocoes;
+    }
 }

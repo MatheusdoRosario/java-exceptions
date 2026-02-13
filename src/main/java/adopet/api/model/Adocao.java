@@ -11,7 +11,6 @@ import lombok.NoArgsConstructor;
 @Table(name = "adocoes")
 @NoArgsConstructor
 @AllArgsConstructor
-@Getter
 @EqualsAndHashCode(of = "id")
 public class Adocao {
 
@@ -48,5 +47,29 @@ public class Adocao {
     {
         this.status = StatusAdocao.REPROVADO;
         this.justificativa = justificativa;
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public Tutor getTutor() {
+        return tutor;
+    }
+
+    public Pet getPet() {
+        return pet;
+    }
+
+    public String getMotivo() {
+        return motivo;
+    }
+
+    public StatusAdocao getStatus() {
+        return status;
+    }
+
+    public String getJustificativa() {
+        return justificativa;
     }
 }

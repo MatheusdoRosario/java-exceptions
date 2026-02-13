@@ -10,7 +10,6 @@ import lombok.NoArgsConstructor;
 
 @Table(name = "pets")
 @Entity
-@Getter
 @NoArgsConstructor
 @AllArgsConstructor
 @EqualsAndHashCode(of = "id")
@@ -42,4 +41,33 @@ public class Pet {
     public void marcarComoAdotado(){
         this.adotado = true;
     }
+
+    public Long getId() {
+        return id;
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public Integer getIdade() {
+        return idade;
+    }
+
+    public TipoPet getTipo() {
+        return tipo;
+    }
+
+    public Boolean getAdotado() {
+        return adotado;
+    }
+
+    public String getImagem() {
+        return imagem;
+    }
+
+    public Adocao getAdocao() {
+        return adocao;
+    }
 }
+
